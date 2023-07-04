@@ -4,3 +4,17 @@ part of 'advicer_bloc.dart';
 abstract class AdvicerState {}
 
 class AdvicerInitial extends AdvicerState {}
+
+class AdvicerStateLoading extends AdvicerState {}
+
+class AdvicerStateLoaded extends AdvicerState {
+  final String advice;
+
+  AdvicerStateLoaded({required this.advice});
+}
+
+class AdvicerStateError extends AdvicerState {
+  final String errorMsg;
+
+  AdvicerStateError({required this.errorMsg});
+}

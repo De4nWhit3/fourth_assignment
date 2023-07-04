@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
                 ),
               ],
             ),
-            body: const AdvicePage(),
+            body: const AdvicePageWrapperProvider(),
           ),
         );
       },
