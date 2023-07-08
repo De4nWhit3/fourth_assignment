@@ -3,6 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 // import 'package:fourth_assignment/2_application/pages/advice/bloc/advicer_bloc.dart';
 import 'package:fourth_assignment/2_application/pages/advice/cubit/small_advice_cubit.dart';
 
+import '../../../injection.dart';
+
 class AdvicePageWrapperProvider extends StatelessWidget {
   const AdvicePageWrapperProvider({super.key});
 
@@ -11,7 +13,7 @@ class AdvicePageWrapperProvider extends StatelessWidget {
     // provide the bloc to advice page
     return BlocProvider<SmallAdviceCubit>(
       // create: (context) => AdvicerBloc(),
-      create: (context) => SmallAdviceCubit(),
+      create: (context) => sl<SmallAdviceCubit>(),
       child: const AdvicePage(),
     );
   }

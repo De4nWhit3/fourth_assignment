@@ -11,8 +11,10 @@ const cacheErrorMessage = 'cache failure';
 const defaultErrorMessage = 'default failure';
 
 class SmallAdviceCubit extends Cubit<SmallAdviceState> {
-  SmallAdviceCubit() : super(SmallAdviceInitial());
-  final AdviceUseCases adviceUseCases = AdviceUseCases();
+  final AdviceUseCases adviceUseCases;
+
+  SmallAdviceCubit({required this.adviceUseCases})
+      : super(SmallAdviceInitial());
 
   void requestAdvice() async {
     emit(AdvicerStateLoading());
