@@ -241,7 +241,7 @@ packages:
     source: hosted
     version: "1.2.1"
   test_api:
-    dependency: transitive
+    dependency: "direct dev"
     description:
       name: test_api
       sha256: eb6ac1540b26de412b3403a163d919ba86f6a973fe6cc50ae3541b80092fdcfb
